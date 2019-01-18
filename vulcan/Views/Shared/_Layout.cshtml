@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jean Ruffato - @ViewData["Title"]</title>
+    <title>Home - @ViewData["Title"]</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
@@ -26,7 +26,8 @@
         <div class="top">
             <span class="font pointer"><i class="header_menu fas fa-home"></i>@Html.ActionLink("Home", "Index", "Home")</span>
             <span class="font pointer"><i class="header_menu fas fa-server"></i>Escanear</span>
-            <span class="font pointer"><i class="header_menu fas fa-bug"></i>@Html.ActionLink("Vulnerabilidades", "Vulnerabilities", "Home")</span>
+            <span class="font pointer"><i class="header_menu fas fa-chart-pie"></i>Relatório</span>
+            <span class="font pointer"><i class="header_menu fas fa-bug"></i>@Html.ActionLink("Vulnerabilidades", "Index", "vulnerabilities")</span>
             <span class="font pointer"><i class="header_menu far fa-dot-circle"></i>Alvos</span>
             <span class="pointer font logout"><i class="header_menu fas fa-sign-out-alt"></i>Sair: Jean Ruffato</span>
             <span class="font pointer logout">21<i class="notification fas fa-bell fa-lg"></i></span>
@@ -38,9 +39,8 @@
     </div>
 
     <environment include="Development">
-        <script src="~/js/jquery-3.3.1.min.js"></script>
-        <script src="~/js/bootstrap.min.js"></script>
-        <script src="~/js/style.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
     </environment>
     <environment exclude="Development">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"

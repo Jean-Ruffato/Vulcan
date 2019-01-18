@@ -6,11 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace vulcan.Controllers
 {
-    public class HomeController : Controller
+    public class ScansController : Controller
     {
         public IActionResult Index()
         {
-            ViewData["Title"] = "Home";
             return View();
         }
     }
