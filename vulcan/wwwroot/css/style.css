@@ -8,7 +8,7 @@
 
 .body {
     /* Configurações de estilo do corpo da página */
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(61, 80, 91); /* #263544*/
     min-height: 100%;
     width: 100%;
     position: absolute;
