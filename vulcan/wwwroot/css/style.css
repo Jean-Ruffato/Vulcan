@@ -1,0 +1,78 @@
+﻿.header {
+    /* Configurações de estilo da barra superior */
+    height: 40px;
+    width: auto;
+    overflow: auto;
+    background-color: rgba(5, 5, 5, 0.884);
+}
+
+.body {
+    /* Configurações de estilo do corpo da página */
+    background-color: rgb(224, 224, 224);
+    min-height: 100%;
+    width: 100%;
+    position: absolute;
+    margin-top: 0px;
+}
+
+.font {
+    /* Configurações de estilo da fonte usada na página */
+    outline: none;
+    font-family: monospace;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
+.header_menu {
+    /* Configurações de estilo dos menus e submenus da barra superior */
+    padding-left: 12px;
+    padding-right: 3px;
+}
+
+.logout {
+    /* Configurações de estilo do menu de logout */
+    padding-top: 6px;
+    padding-right: 20px;
+    float: right;
+}
+
+
+.menu_spacing {
+    /* Espaçamento entre os menus da barra superior */
+    margin-right: 4px;
+}
+
+.pointer {
+    /* Configurações relacionadas ao ponteiro do mouse */
+    cursor: pointer;
+}
+
+.notification {
+    /* Configurações da menu de notificação */
+    padding-left: 5px;
+}
+
+.active {
+    /* Muda cor do link na barra superior */
+    outline: none;
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(170, 169, 169);
+}
+
+.side_bar {
+    /* Configurações do menu lateral */
+    padding-left: 2px;
+    padding-right: 15px;
+}
+
+.top {
+    padding-top: 5px;
+}
+
+.contact {
+    margin-top: 15px;
+    padding-left: 10%;
+    position:relative;
+}
