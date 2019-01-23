@@ -36,7 +36,7 @@ namespace vulcan
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddDbContext<vulcanContext>(options =>
+            services.AddDbContext<VulcanContext>(options =>
                     options.UseMySql(Configuration.GetConnectionString("vulcanContext"), builder =>
                     builder.MigrationsAssembly("vulcan")));
         }

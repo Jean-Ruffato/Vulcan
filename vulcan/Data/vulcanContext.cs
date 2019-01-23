@@ -6,13 +6,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace vulcan.Models
 {
-    public class vulcanContext : DbContext
+    public class VulcanContext : DbContext
     {
-        public vulcanContext (DbContextOptions<vulcanContext> options)
+        public VulcanContext (DbContextOptions<VulcanContext> options)
             : base(options)
         {
         }
 
-        public DbSet<vulcan.Models.Vulnerabilities> Vulnerabilities { get; set; }
+        public DbSet<Vulnerabilities> Vulnerabilities { get; set; }
+        public DbSet<Scan> Scan { get; set; }
     }
 }

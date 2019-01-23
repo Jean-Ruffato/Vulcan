@@ -15,9 +15,9 @@ namespace vulcan.Controllers
         {
             return View();
         }
-        private readonly vulcanContext _context;
+        private readonly VulcanContext _context;
 
-        public VulnerabilitiesController(vulcanContext context)
+        public VulnerabilitiesController(VulcanContext context)
         {
             _context = context;
         }
