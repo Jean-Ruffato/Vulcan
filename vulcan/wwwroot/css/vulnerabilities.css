@@ -1,7 +1,7 @@
 ﻿.find_vul {
     margin-top: 25px;
     margin-left: 15px;
-    width: 55%;
+    width: 96%;
 }
 
 .seri_vul {
@@ -72,7 +72,7 @@
     background-color: rgb(46, 44, 44);
     margin-right: 30px;
     min-height: 28px;
-    width: 100%;
+    width: 96%;
     border-style: solid;
     border-width: 0.3px;
     border-color: rgba(2, 2, 2, 0.24);
@@ -86,7 +86,7 @@
 .vul_list {
     /* Menu que mostra a lista de vulnerabilidades */
     height: 250px;
-    width: 100%;
+    width: 96%;
     margin-right: 30px;
     border-radius: 1px;
     background-color: rgb(234, 234, 234);
@@ -102,7 +102,7 @@
     background-color: rgb(46, 44, 44);
     margin-right: 30px;
     min-height: 28px;
-    width: 100%;
+    width: 96%;
     border-style: solid;
     border-width: 0.3px;
     border-color: rgba(2, 2, 2, 0.24);
@@ -115,7 +115,7 @@
 .table_crud {
     /* Menu que mostra a lista de vulnerabilidades */
     height: 350px;
-    width: 100%;
+    width: 96%;
     margin-right: 30px;
     border-radius: 1px;
     background-color: rgb(234, 234, 234);
@@ -131,7 +131,7 @@
     font-family: monospace;
     font-weight: bold;
     font-size: 12px;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);    
 }
 
 .font_vul {
@@ -140,5 +140,5 @@
     font-size: 13px;
     color: rgb(22, 21, 21);
     overflow: auto;
-
+    display: grid;
 }

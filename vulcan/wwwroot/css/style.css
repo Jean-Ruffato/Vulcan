@@ -1,18 +1,46 @@
 ﻿.header {
     /* Configurações de estilo da barra superior */
-    height: 40px;
-    width: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
     overflow: auto;
+    height: 40px;
     background-color: rgba(5, 5, 5, 0.884);
 }
 
 .body {
     /* Configurações de estilo do corpo da página */
+    padding-top: 35px;
     background-color: rgb(61, 80, 91); /* #263544*/
     min-height: 100%;
-    width: 100%;
     position: absolute;
+    width: 100%;
     margin-top: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    -webkit-border-radius: 0px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: rgb(170, 169, 169);
+    -webkit-border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 5px;
+    background-color: #666;
+    -webkit-border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    width: 5px;
+    background-color: #666;
+    -webkit-border-radius: 1px;
 }
 
 .font {
@@ -20,7 +48,7 @@
     outline: none;
     font-family: monospace;
     font-size: 12px;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);    
 }
 
 .header_menu {

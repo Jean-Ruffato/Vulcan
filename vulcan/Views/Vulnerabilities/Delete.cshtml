@@ -1,0 +1,99 @@
+﻿@model vulcan.Models.Vulnerabilities
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Vulnerabilities</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Product)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Version)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Version)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VulnerabilitieID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VulnerabilitieID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfidentialityImpact)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConfidentialityImpact)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IntegrityImpact)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IntegrityImpact)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AvaliabilityImpact)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AvaliabilityImpact)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessComplexity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccessComplexity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Authentication)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Authentication)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GainedAccess)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GainedAccess)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Score)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Score)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gravity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Gravity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

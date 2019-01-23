@@ -1,0 +1,94 @@
+﻿@model vulcan.Models.Vulnerabilities
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Vulnerabilities</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Product" class="control-label"></label>
+                <input asp-for="Product" class="form-control" />
+                <span asp-validation-for="Product" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Version" class="control-label"></label>
+                <input asp-for="Version" class="form-control" />
+                <span asp-validation-for="Version" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VulnerabilitieID" class="control-label"></label>
+                <input asp-for="VulnerabilitieID" class="form-control" />
+                <span asp-validation-for="VulnerabilitieID" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="ConfidentialityImpact" class="control-label"></label>
+                <input asp-for="ConfidentialityImpact" class="form-control" />
+                <span asp-validation-for="ConfidentialityImpact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IntegrityImpact" class="control-label"></label>
+                <input asp-for="IntegrityImpact" class="form-control" />
+                <span asp-validation-for="IntegrityImpact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AvaliabilityImpact" class="control-label"></label>
+                <input asp-for="AvaliabilityImpact" class="form-control" />
+                <span asp-validation-for="AvaliabilityImpact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccessComplexity" class="control-label"></label>
+                <input asp-for="AccessComplexity" class="form-control" />
+                <span asp-validation-for="AccessComplexity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Authentication" class="control-label"></label>
+                <input asp-for="Authentication" class="form-control" />
+                <span asp-validation-for="Authentication" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GainedAccess" class="control-label"></label>
+                <input asp-for="GainedAccess" class="form-control" />
+                <span asp-validation-for="GainedAccess" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Type" class="control-label"></label>
+                <input asp-for="Type" class="form-control" />
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Score" class="control-label"></label>
+                <input asp-for="Score" class="form-control" />
+                <span asp-validation-for="Score" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gravity" class="control-label"></label>
+                <input asp-for="Gravity" class="form-control" />
+                <span asp-validation-for="Gravity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

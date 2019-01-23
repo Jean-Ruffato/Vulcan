@@ -1,94 +1,113 @@
 ﻿<!-- Menu de vulnerabilidades -->
+@model IEnumerable<vulcan.Models.Vulnerabilities>
 <div class="row">
     <div class="find_vul">
         <div class="vul_list_head">
-            <span class="font"><i class="header_menu fas fa-bug"></i>Vulnerabilidades Encontradas</span>
-            <span class="font pointer gear"><i class="header_menu fas fa-cogs"></i></span>
+            <span class="font"><i class="header_menu fas fa-bug"></i>Base de Vulnerabilidades</span>
+            <span class="font pointer gear"><i class="header_menu fas fa-plus"></i><a asp-action="create">Adicionar</a></span>
         </div>
 
-        <div class="vul_list">
-            <ul class="top font_vul">
-                <li>
-                    <b>Wrap-around Error: </b>Wrap around errors occur whenever a value is incremented past the maximum value for its type and therefore "wraps around" to a very small, negative, or undefined value.
-                </li>
+        <div class="vul_list font_vul">
+            <div class="table-responsive">
+                <table class="table table-bordered table-sm">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>
+                                    Produto
+                                </th>
+                                <th>
+                                    Versão
+                                </th>
+                                <th>
+                                    Código
+                                </th>                                
+                                <th>
+                                    Confidencialidade
+                                </th>
+                                <th>
+                                    Integridade
+                                </th>
+                                <th>
+                                    Disponibilidade
+                                </th>
+                                <th>
+                                    Complexidade Acesso
+                                </th>
+                                <th>
+                                    Autenticacão
+                                </th>
+                                <th>
+                                    Ganho Acesso
+                                </th>
+                                <th>
+                                    Tipo
+                                </th>
+                                <th>
+                                    Pontuacão
+                                </th>
+                                <th>
+                                    Gravidade
+                                </th>   
+                                <th>Acão</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr class="">                                   
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Product)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Version)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.VulnerabilitieID)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ConfidentialityImpact)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.IntegrityImpact)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.AvaliabilityImpact)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.AccessComplexity)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Authentication)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.GainedAccess)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Type)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Score)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Gravity)
+                                    </td>                                    
+                                    <td>
+                                        <button type="button" class="btn btn-info btn-sm">
+                                            <a asp-action="Details" asp-route-id="@item.ID">Detalhes</a>
+                                        </button>
+                                        <button type="button" class="btn btn-danger btn-sm">
+                                            <a asp-action="Delete" asp-route-id="@item.ID">Apagar</a>
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>                
+            </div>
 
-                <li>
-                    <b>Incorrect Calculation of Buffer Size: </b>The software does not correctly calculate the size to be used when allocating a buffer, which could lead to a buffer overflow.
-                </li>
-
-                <li>
-                    <b>Incorrect Calculation of Multi-Byte String Length: </b>The software does not correctly calculate the length of strings that can contain wide or multi-byte characters.
-                </li>
-                <li>
-                    <b>Wrap-around Error: </b>Wrap around errors occur whenever a value is incremented past the maximum value for its type and therefore "wraps around" to a very small, negative, or undefined value.
-                </li>
-
-                <li>
-                    <b>Incorrect Calculation of Buffer Size: </b>The software does not correctly calculate the size to be used when allocating a buffer, which could lead to a buffer overflow.
-                </li>
-
-                <li>
-                    <b>Incorrect Calculation of Multi-Byte String Length: </b>The software does not correctly calculate the length of strings that can contain wide or multi-byte characters.
-                </li>
-                <li>
-                    <b>Wrap-around Error: </b>Wrap around errors occur whenever a value is incremented past the maximum value for its type and therefore "wraps around" to a very small, negative, or undefined value.
-                </li>
-
-                <li>
-                    <b>Incorrect Calculation of Buffer Size: </b>The software does not correctly calculate the size to be used when allocating a buffer, which could lead to a buffer overflow.
-                </li>
-
-                <li>
-                    <b>Incorrect Calculation of Multi-Byte String Length: </b>The software does not correctly calculate the length of strings that can contain wide or multi-byte characters.
-                </li>
-            </ul>
         </div>
     </div>
-
-    <div class="seri_vul">
-        <div class="top_vul_head">
-            <span class="font"><i class="header_menu fas fa-bug"></i>Vulnerabilidades Graves</span>
-            <span class="font pointer gear"><i class="header_menu fas fa-cogs"></i></span>
-        </div>
-
-        <div class="top_vul">
-            <ul class="top font_vul">
-                <li>
-                    <b>@ViewData["Vul1"]: </b>Wrap around errors occur whenever a value is incremented past the maximum value for its type and therefore "wraps around" to a very small, negative, or undefined value.
-                </li>
-
-                <li>
-                    <b>@ViewData["Vul2"]: </b>The software does not correctly calculate the size to be used when allocating a buffer, which could lead to a buffer overflow.
-                </li>
-
-                <li>
-                    <b>Incorrect Calculation of Multi-Byte String Length: </b>The software does not correctly calculate the length of strings that can contain wide or multi-byte characters.
-                </li>
-                <li>
-                    <b>Wrap-around Error: </b>Wrap around errors occur whenever a value is incremented past the maximum value for its type and therefore "wraps around" to a very small, negative, or undefined value.
-                </li>
-
-                <li>
-                    <b>Incorrect Calculation of Buffer Size: </b>The software does not correctly calculate the size to be used when allocating a buffer, which could lead to a buffer overflow.
-                </li>
-
-                <li>
-                    <b>Incorrect Calculation of Multi-Byte String Length: </b>The software does not correctly calculate the length of strings that can contain wide or multi-byte characters.
-                </li>
-                <li>
-                    <b>Wrap-around Error: </b>Wrap around errors occur whenever a value is incremented past the maximum value for its type and therefore "wraps around" to a very small, negative, or undefined value.
-                </li>
-
-                <li>
-                    <b>Incorrect Calculation of Buffer Size: </b>The software does not correctly calculate the size to be used when allocating a buffer, which could lead to a buffer overflow.
-                </li>
-
-                <li>
-                    <b>Incorrect Calculation of Multi-Byte String Length: </b>The software does not correctly calculate the length of strings that can contain wide or multi-byte characters.
-                </li>
-            </ul>
-        </div>
-    </div>
+    
     <div class="crud_vul">
         <div class="table_crud_head">
             <span class="font"><i class="header_menu fas fa-bug"></i>Cadastrar Vulnerabilidades</span>

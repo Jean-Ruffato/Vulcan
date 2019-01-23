@@ -3,13 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - @ViewData["Title"]</title>
+    <title>Vulcan>@ViewData["Title"]</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
         <link href="~/css/vulnerabilities.css" rel="stylesheet" />
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/style.css" />
+        <link href="~/css/home.css" rel="stylesheet" />
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -21,20 +22,21 @@
     </environment>
 </head>
 <body>
-    <!-- Barra superior -->
-    <div class="header">
-        <div class="top">
-            <span class="font pointer"><i class="header_menu fas fa-home"></i>@Html.ActionLink("Home", "Index", "Home")</span>
-            <span class="font pointer"><i class="header_menu fas fa-server"></i>Escanear</span>
-            <span class="font pointer"><i class="header_menu fas fa-chart-pie"></i>Relatório</span>
-            <span class="font pointer"><i class="header_menu fas fa-bug"></i>@Html.ActionLink("Vulnerabilidades", "Index", "vulnerabilities")</span>
-            <span class="font pointer"><i class="header_menu far fa-dot-circle"></i>Alvos</span>
-            <span class="pointer font logout"><i class="header_menu fas fa-sign-out-alt"></i>Sair: Jean Ruffato</span>
-            <span class="font pointer logout">21<i class="notification fas fa-bell fa-lg"></i></span>
-        </div>
-    </div>
+
 
     <div class="container-fluid body">
+        <!-- Barra superior -->
+        <div class="header">
+            <div class="top">
+                <span class="font pointer"><i class="header_menu fas fa-home"></i>@Html.ActionLink("Home", "Index", "Home")</span>
+                <span class="font pointer"><i class="header_menu fas fa-server"></i>Escanear</span>
+                <span class="font pointer"><i class="header_menu fas fa-chart-pie"></i>Relatório</span>
+                <span class="font pointer"><i class="header_menu fas fa-bug"></i>@Html.ActionLink("Vulnerabilidades", "Index", "vulnerabilities")</span>
+                <span class="font pointer"><i class="header_menu far fa-dot-circle"></i>Alvos</span>
+                <span class="pointer font logout"><i class="header_menu fas fa-sign-out-alt"></i>Sair: Jean Ruffato</span>
+                <span class="font pointer logout">21<i class="notification fas fa-bell fa-lg"></i></span>
+            </div>
+        </div>
         @RenderBody()
     </div>
 
