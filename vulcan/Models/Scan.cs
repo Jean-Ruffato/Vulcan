@@ -20,7 +20,7 @@ namespace vulcan.Models
         {
         }
 
-        public Scan(int iD, int scanID, string host, string operatingSystem, string softwareName, string softwareVersion, ScanStatus scanStatus)
+        public Scan(int iD, int scanID, string host, string operatingSystem, string softwareName, string softwareVersion, int vulnerabilitiesQuantity, ScanStatus scanStatus)
         {
             ID = iD;
             ScanID = scanID;
@@ -28,6 +28,7 @@ namespace vulcan.Models
             OperatingSystem = operatingSystem;
             SoftwareName = softwareName;
             SoftwareVersion = softwareVersion;
+            VulnerabilitiesQuantity = vulnerabilitiesQuantity;
             ScanStatus = scanStatus;
         }
 
